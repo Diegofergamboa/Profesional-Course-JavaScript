@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="/assets/index.css">
+</head>
+<body>
+    <header>
+        <h1>Platzi Media Player.js</h1>
+        <p>An extensible media player.</p>
+    </header>
+
+    <main class="container">
+        <video class="movie">
+            <source src="/assets/BigBuckBunny_512kb.mp4">
+        </video>
+
+        <button>Play / Pause</button>
+    </main>
+    <script>
+        const video = document.querySelector("video");
+        const button = document.querySelector("button");
+
+        function MediaPlayer(config) {
+            this.media.player();
+        };
+
+
+        MediaPlayer.prototype.play = function() {
+            video.play();
+            video.pause();
+        }
+
+        const player = new MediaPlayer();
+
+        button.onclick = () => {
+            if (player == paused() {
+                player.play();
+                else 
+            }
+        }
+    </script>
+</body>
+</html>
