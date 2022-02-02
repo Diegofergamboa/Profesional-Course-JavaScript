@@ -1,0 +1,27 @@
+{
+  "name": "profesional-course-javascript",
+  "version": "1.0.0",
+  "description": "Notes from the Developer JavaScript of Platzi, Mozilla doc and, logical programming exercises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diegofergamboa/Profesional-Course-JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Diegofergamboa/Profesional-Course-JavaScript/issues"
+  },
+  "homepage": "https://github.com/Diegofergamboa/Profesional-Course-JavaScript#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
+}
