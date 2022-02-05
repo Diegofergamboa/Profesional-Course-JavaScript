@@ -3,7 +3,7 @@ function MediaPlayer(config) {
     this.plugins = config.plugins || [];
 
     this._initPlugins();
-};
+}; 
 
 
 MediaPlayer.prototype._initplig
