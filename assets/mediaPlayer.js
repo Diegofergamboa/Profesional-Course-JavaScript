@@ -7,6 +7,7 @@ function MediaPlayer(config) {
 
 
 MediaPlayer.prototype._initplig
+
 MediaPlayer.prototype.play = function() {
     this.media.play();
 };
