@@ -1,4 +1,4 @@
-import MediaPlayer from "./mediaPlayer.js";
+import MediaPlayer from "./MediaPlayer.js";
 import AutoPlay from './plugins/AutoPlay.js'
 
 const video = document.querySelector("video");

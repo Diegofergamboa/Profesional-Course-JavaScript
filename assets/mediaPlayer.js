@@ -24,4 +24,4 @@ MediaPlayer.prototype.togglePlay = function(){
     }
 };
 
-export default MediaPlayer();
+export default MediaPlayer;
