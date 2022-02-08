@@ -13,5 +13,8 @@ let octal = 0o744;
 let ispRO;
 ispRO = true;
 // Strings en TS
+// La importancia de TS es que siempre va a permitir el que podamos fijar el valor del tipado que va a tener la variable.
 let username = 'Diegofergamboa';
-console.log(username);
+// Backtick o Backquote(``) para colocar expresiones dentro de las variables.
+// Template String
+// Uso de back-stick ``
