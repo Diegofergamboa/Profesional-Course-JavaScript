@@ -23,4 +23,4 @@ let username : string = 'Diegofergamboa';
 // Backtick o Backquote(``) para colocar expresiones dentro de las variables.
 
 // Template String
-// Uso de back-tick ``
+// Uso de back-stick ``
