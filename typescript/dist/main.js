@@ -1,4 +1,3 @@
-"use strict";
 console.log('hola platzi world');
 let phone;
 phone = 1;
