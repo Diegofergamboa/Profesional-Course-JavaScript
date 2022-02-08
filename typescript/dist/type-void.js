@@ -27,5 +27,5 @@ showFormattedInfo({
 });
 //Void como tipo de variable,
 let unusuable;
-unusuable = null;
+// unusuable = null;
 unusuable = undefined;
