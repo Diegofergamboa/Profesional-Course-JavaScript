@@ -18,4 +18,7 @@ otherUndefinedVariable = 1 ; // 1
 // Es decir undefined y null son subtipos o ramas de any.
 
 // Null y undefined como subtipos.
-
+// strictNullChecks - consiste en agregar un check para verificar las asignaciones de las variables. nos permite ver los errores que tenemos en las variables.
+let albumName: string;
+albumName: undefined;
+albumName: null;
