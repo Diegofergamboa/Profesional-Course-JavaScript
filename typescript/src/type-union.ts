@@ -33,3 +33,12 @@ function getUsernamebyId(id: IdUser): Username {
 getUsernamebyId(20);
 getUsernamebyId('cadena con id del user');
 
+// Tipos literales.
+// Conjunto de reglas que solo admitan ciertos parámetros específicos
+
+type SquareSize = '100x100' | '500x500' | '1000x1000' ;   //Referencia a los valores cuadrados para fotografía
+
+let smallPicture: SquareSize = '100x100'; // El editor solo me permite asignar los valores asignados anteriormente.
+
+let mediumPicture: SquareSize = '500x500';
+let bigPicture: SquareSize = '1000x1000';

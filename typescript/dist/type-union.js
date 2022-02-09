@@ -10,3 +10,6 @@ function getUsernamebyId(id) {
 }
 getUsernamebyId(20);
 getUsernamebyId('cadena con id del user');
+let smallPicture = '100x100'; // El editor solo me permite asignar los valores asignados anteriormente.
+let mediumPicture = '500x500';
+let bigPicture = '1000x1000';
