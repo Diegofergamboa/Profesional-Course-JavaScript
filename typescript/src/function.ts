@@ -30,6 +30,26 @@ let createPic = (title: string, date: string, size: SqueareSize): object => {
 };
 
 const picture = createPic('Platzi session', '2020-04', '100x100');
-console.log('picture con ECMAScript ' + picture);
+// // console.log('picture con ECMAScript ' + picture);
+
+//Tipo de retorno con TypeScript
+
+function handleErrorExample(code: number, message: string): never | string {
+    // Procesamiento del código.
+    if(message === 'error') {
+        throw new Error(`${message}. Code error: ${code}`);
+    } else {
+        return 'An error happened';
+    }
+}
+
+
+try {
+    let result = handleError(200, 'OK'); // string.
+    result = handleError(404, 'error'); // never, es decir nunca retorna un erro válido.
+    console.log('result ' + result);
+} catch (error) {
+    
+}
 
 
