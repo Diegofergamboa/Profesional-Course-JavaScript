@@ -34,3 +34,36 @@ showPicture({
     orientation: PhotoOrientation.Portrait,
     // extraPropertie: 'test propertie', // Error 
 });
+
+
+interface PictureConfig { // Se agrega '?' para opcionales.
+    title?: string,
+    date?: string,
+    orientation?: PhotoOrientation;
+}
+
+function generatePicture(config: PictureConfig){
+    const pic = {title: '', date: ''}
+    if(config.title) {pic.title = config.title;}
+    if(config.date) {pic.date = config.date;}
+    return pic;
+}
+
+let picture = generatePicture({});
+console.log('picture' , picture);
+picture = generatePicture({title: 'Tipical photo'});
+console.log('picture' , picture);
+
+// Propiedad readonly para que el valor sea de solo lectura, es decir inmutables.
+
+// Interfaz: Usuario.
+
+interface User {
+    readonly id: number, // Con esta propiedad podemos determinar que la propiedad del objeto es de solo lectura.
+    username: string,
+    isPro: boolean,
+};
+
+let userLecture: User;
+userLecture = {id: 152, username: 'diegofergamboa', isPro: true};
+console.log('userLecture' + userLecture);

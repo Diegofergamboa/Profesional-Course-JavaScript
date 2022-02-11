@@ -25,3 +25,21 @@ showPicture({
     orientation: PhotoOrientation.Portrait,
     // extraPropertie: 'test propertie', // Error 
 });
+function generatePicture(config) {
+    const pic = { title: '', date: '' };
+    if (config.title) {
+        pic.title = config.title;
+    }
+    if (config.date) {
+        pic.date = config.date;
+    }
+    return pic;
+}
+let picture = generatePicture({});
+console.log('picture', picture);
+picture = generatePicture({ title: 'Tipical photo' });
+console.log('picture', picture);
+;
+let userLecture;
+userLecture = { id: 152, username: 'diegofergamboa', isPro: true };
+console.log('userLecture' + userLecture);
