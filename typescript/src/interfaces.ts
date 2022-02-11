@@ -67,3 +67,5 @@ interface User {
 let userLecture: User;
 userLecture = {id: 152, username: 'diegofergamboa', isPro: true};
 console.log('userLecture' + userLecture);
+
+
