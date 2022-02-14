@@ -59,7 +59,7 @@ album.addPicture(picture);
 // Accediendo a los mienbros publicos.
 // Al cambiar aquí se van a cambiar los diferentes valores debido a que son clases públicas, esto permite que se cambien los valores originales.
 
-picture.id = 100;
-picture.title = 'new title';
-album.title = 'Personal Activities';
+// picture.id = 100;
+// picture.title = 'new title';
+// album.title = 'Personal Activities';
 
