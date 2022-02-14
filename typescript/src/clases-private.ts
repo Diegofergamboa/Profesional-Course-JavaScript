@@ -8,9 +8,9 @@ enum Photoorientation {
 };
 
 class Picture {
-    public id: number;
-    public title: string;
-    public orientation: Photoorientation;
+    private id: number;
+    private title: string;
+    private orientation: Photoorientation;
 
     public constructor(
         id: number,
@@ -33,9 +33,9 @@ class Picture {
 
 
 class Album {
-    public id: number;
-    public title: string;
-    public pictures: Picture[];
+    private id: number;
+    private title: string;
+    private pictures: Picture[];
 
     public constructor(
         id: number,
@@ -49,7 +49,7 @@ class Album {
     public addPicture(picture: Picture) {
         this.pictures.push(picture);
     }
-}
+};
 
 const album: Album = new Album(1, 'Personal Pictures');
 const picture: Picture = new Picture(1, 'platzi session', Photoorientation.Square)
