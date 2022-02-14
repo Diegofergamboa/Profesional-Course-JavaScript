@@ -8,9 +8,9 @@ enum Photoorientation {
 };
 
 class Picture {
-    private id: number;
-    private title: string;
-    private orientation: Photoorientation;
+    public id: number;
+    public title: string;
+    public orientation: Photoorientation;
 
     public constructor(
         id: number,
@@ -33,9 +33,9 @@ class Picture {
 
 
 class Album {
-    private id: number;
-    private title: string;
-    private pictures: Picture[];
+    public id: number;
+    public title: string;
+    public pictures: Picture[];
 
     public constructor(
         id: number,
@@ -49,7 +49,7 @@ class Album {
     public addPicture(picture: Picture) {
         this.pictures.push(picture);
     }
-};
+}
 
 const album: Album = new Album(1, 'Personal Pictures');
 const picture: Picture = new Picture(1, 'platzi session', Photoorientation.Square)
@@ -59,9 +59,7 @@ album.addPicture(picture);
 // Accediendo a los mienbros publicos.
 // Al cambiar aquí se van a cambiar los diferentes valores debido a que son clases públicas, esto permite que se cambien los valores originales.
 
-// picture.id = 100;
-// picture.title = 'new title';
-// album.title = 'Personal Activities';
-
-// A partir de la 3.8 de ts, hemos podido tener métodos privados en nuestor código, lo cuál es excelente para poder darle más poder
+picture.id = 100;
+picture.title = 'new title';
+album.title = 'Personal Activities';
 
