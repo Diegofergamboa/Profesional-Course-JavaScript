@@ -33,7 +33,7 @@ class Picture {
 
 
 class Album {
-    #public id: number;
+    #id: number;
     #title: string;
     #pictures: Picture[];
 
@@ -47,7 +47,7 @@ class Album {
     }
 
     public addPicture(picture: Picture) {
-        this.pictures.push(picture);
+        this.#pictures.push(picture);
     }
 }
 

@@ -1,4 +1,4 @@
-export {}
+export = {}
 
 enum Photoorientation {
     LandScape,
@@ -10,65 +10,68 @@ enum Photoorientation {
 // Superclase
 
 class Item {
-    protected id: number;
-    protected title: string;
+    protected _id: number;
+    protected _title: string;
 
     constructor(id: number, title: string){
         this.id = id;
         this.title = title
     }
     
-    get id(id: number){
+    // Modificadores de clase.
+
+    get id (){
         return this._id
     }
-    set id(id: number){
+    set id (id: number){
         this._id = id;
     }
-    get title(title: string){
-        return this._title = title
+    get title (){
+        return this._title;
     }
-    set title(title: string){
+    set title (title: string){
         this._title = title;
     }
 }
 
 //Extendemos de la super clase item
-class Picture extends Item{ 
+// Lo hacemos con la sper clase item.
+class Picture extends Item { 
+    // Propiedades.
     private _orientation: Photoorientation;
 
-    public constructor(
-        orientation: Photoorientation )
-        super(id, title;)
-        
-        //Modificadores de acceso.
-        get orientation(){
-            return this._orientation
-        }
-        set orientation(orientation: Photoorientation){
-            this._orientation = orientation;
-        }
+    public constructor( id: number , title: string, orientation: Photoorientation){
+        super(id, title);
+        this._orientation = orientation;
+    }
     
         public toString() {
             return `[id: ${this.id}],
-                    [title: ${this.title}],
-                    [orientation: ${this.orientation}],
-            `
-        }
-}
+            [title: ${this.title}]
+            [orientation: ${this._orientation}]`
+        };
+};
+
+// Ejemplo de extracción de información.
+
+const Selfie = new Picture(55, 'Being yourself in a selfie', Photoorientation.Portrait)
+
+
+// Llamando la nueva instancia creada.
+console.log('Nueva INSTANCIA' + Selfie);
+// Llamando el getter de la instancia Selfie
+console.log('Probando el get de la instancia Selfie ' + Selfie.id);
+// Llamando el getter de la instancia Selfie
+Selfie.id = 155;
+console.log('Probando en setter de la nueva instanci Selfie ' + Selfie.id);
 
 
 
-class Album {
-    private id: number;
-    private title: string;
-    private pictures: Picture[];
+class Album extends Item{
+    protected pictures: Picture[];
 
-    public constructor(
-        id: number,
-        title: string
-    ) {
-        this.id = id;
-        this.title = title;
+    public constructor(id: number, title: string, pictures: []) {
+        super(id, title); // Constrctor de la súper clase.
         this.pictures = [];
     }
 
@@ -77,17 +80,6 @@ class Album {
     }
 };
 
-const album: Album = new Album(1, 'Personal Pictures');
-const picture: Picture = new Picture(1, 'platzi session', Photoorientation.Square)
-album.addPicture(picture);
 
-
-// Accediendo a los mienbros publicos.
-// Al cambiar aquí se van a cambiar los diferentes valores debido a que son clases públicas, esto permite que se cambien los valores originales.
-
-picture.id = 100; //Accediendo a través de los métodos de get y set.
-picture.title = 'new title'; //Accediendo a través de los métodos de get y set.
-
-
-// A partir de la 3.8 de ts, hemos podido tener métodos privados en nuestor código, lo cuál es excelente para poder darle más poder
-
+const newAlbum = new Album (1, 'Personal Pictures', []);
+console.log('NEW ALBUM ' + newAlbum);
